@@ -8,7 +8,7 @@ export default function Home() {
   const [ tab, setTab ] = useState<"stack" | "design">("stack");
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <nav className="p-5">
         <ul className="flex gap-5">
           <li 
@@ -24,10 +24,10 @@ export default function Home() {
           <Design />
         </div>
       </main>
-      <footer className="sticky bottom-0">
-        <div className="bg-[#0a0a0a] px-20 py-3 border-t border-white flex justify-end">
+      <footer className="sticky bottom-0 mt-auto">
+        <div className="bg-white dark:bg-[#0a0a0a] px-20 py-3 border-t dark:border-white flex justify-end">
           <button
-            className="bg-white p-2 rounded-md text-black cursor-pointer"
+            className="bg-white p-2 rounded-md text-black cursor-pointer hover:outline-1"
             onClick={generateMDs}
           >Generate MDs</button>
         </div>
