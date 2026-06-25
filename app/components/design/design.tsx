@@ -49,7 +49,7 @@ export default function Design() {
             min-h-40
             w-full
             rounded-md
-            bg-taupe-800
+            dark:bg-taupe-800
             p-3
             border
             border-gray-700
@@ -81,7 +81,7 @@ export default function Design() {
                   ${
                     isSelected
                       ? "border-green-600 bg-green-500 text-white"
-                      : "border-gray-600 bg-gray-800 text-gray-200 hover:bg-gray-700"
+                      : "border-gray-600 bg-gray-300 dark:bg-gray-800 dark:text-gray-200 hover:bg-gray-700"
                   }
                 `}
               >

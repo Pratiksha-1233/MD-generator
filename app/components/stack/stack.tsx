@@ -20,7 +20,7 @@ export default function Stack() {
     <div className="flex flex-col items-center">
       <div className="w-full max-w-4xl">
         {/* METADATA */}
-        <div className="flex flex-col bg-taupe-800 rounded-md p-2 mb-4">
+        <div className="flex flex-col outline-1 dark:bg-taupe-800 dark:outline-0 rounded-md p-2 mb-4">
           <label className="text-sm mb-1" htmlFor="projectName">
             Project Name
           </label>
@@ -34,7 +34,7 @@ export default function Stack() {
             onChange={e => updateMeta({ projectName: e.currentTarget.value })}
           />
         </div>
-        <div className="flex flex-col bg-taupe-800 rounded-md p-2 mb-4">
+        <div className="flex flex-col outline-1 dark:bg-taupe-800 dark:outline-0 rounded-md p-2 mb-4">
           <label className="text-sm mb-1" htmlFor="desc">
             Description
           </label>
@@ -49,7 +49,7 @@ export default function Stack() {
         </div>
         {/* STACK */}
         <form className="grid 2xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 gap-4">
-          <div className="flex flex-col bg-taupe-800 rounded-md p-2">
+          <div className="flex flex-col outline-1 dark:bg-taupe-800 dark:outline-0 rounded-md p-2">
             <label className="text-sm mb-1" htmlFor="framework">
               Framework
             </label>
@@ -61,7 +61,7 @@ export default function Stack() {
               description="Select your preferred framework"
             />
           </div>
-          <div className="flex flex-col bg-taupe-800 rounded-md p-2">
+          <div className="flex flex-col outline-1 dark:bg-taupe-800 dark:outline-0 rounded-md p-2">
             <label className="text-sm mb-1" htmlFor="serverState">
               Server State
             </label>
@@ -73,7 +73,7 @@ export default function Stack() {
               description="State management"
             />
           </div>
-          <div className="flex flex-col bg-taupe-800 rounded-md p-2">
+          <div className="flex flex-col outline-1 dark:bg-taupe-800 dark:outline-0 rounded-md p-2">
             <label className="text-sm mb-1" htmlFor="localization">
               Localization
             </label>
@@ -85,7 +85,7 @@ export default function Stack() {
               description="Localization and translations"
             />
           </div>
-          <div className="flex flex-col bg-taupe-800 rounded-md p-2">
+          <div className="flex flex-col outline-1 dark:bg-taupe-800 dark:outline-0 rounded-md p-2">
             <label className="text-sm mb-1" htmlFor="auth">
               Authentication
             </label>
@@ -97,7 +97,7 @@ export default function Stack() {
               description="Authentication"
             />
           </div>
-          <div className="flex flex-col bg-taupe-800 rounded-md p-2">
+          <div className="flex flex-col outline-1 dark:bg-taupe-800 dark:outline-0 rounded-md p-2">
             <label className="text-sm mb-1" htmlFor="testing">
               Testing
             </label>
