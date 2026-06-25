@@ -1,6 +1,22 @@
-import { DropdownOption } from "@/app/ui/dropdown";
-
-// export const : DropdownOption[] = [
-//   { label: "Next.js + App Router", value: "nextjs-app" },
-//   { label: "Next.js + Pages Router", value: "nextjs-pages" },
-// ] as const;
+export const philosophies = [
+  "Professional",
+  "Casual",
+  "Premium",
+  "Modern",
+  "Minimal",
+  "Bold",
+  "Playful",
+  "Trustworthy",
+  "Corporate",
+  "Friendly",
+  "Elegant",
+  "Technical",
+  "User-Centric",
+  "Accessibility-First",
+  "Mobile-First",
+  "Performance-Oriented",
+  "Content-Focused",
+  "Dashboard-Centric",
+  "Spacious",
+  "Compact",
+]
