@@ -27,17 +27,31 @@ const initialStack: StackConfig = {
   testing: testingOptions[0].value,
 }
 
+interface DesignConfig {
+  philosophies: string[],
+  mood: string,
+  // palettes: 
+}
+
+const initialDesign: DesignConfig = {
+  philosophies: ["Professional", "Minimal", "User-Centric"],
+  mood: "Suitable for large scale cargo management",
+}
+
 interface GeneratorStore {
   meta: Meta,
   stack: StackConfig,
+  design: DesignConfig,
 
   updateMeta: (name: Partial<Meta>) => void,
   updateStack: (stackData: Partial<StackConfig>) => void,
+  updateDesign: (stackData: Partial<DesignConfig>) => void,
 }
 
 export const useGeneratorStore = create<GeneratorStore>((set) => ({
   meta: initialMeta,
   stack: initialStack,
+  design: initialDesign,
 
   updateMeta: (data) =>
     set((state) => ({
@@ -51,6 +65,14 @@ export const useGeneratorStore = create<GeneratorStore>((set) => ({
     set((state) => ({
       stack: {
         ...state.stack,
+        ...data,
+      },
+    })),
+
+  updateDesign: (data) =>
+    set((state) => ({
+      design: {
+        ...state.design,
         ...data,
       },
     })),
