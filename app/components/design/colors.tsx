@@ -77,6 +77,15 @@ export default function Colors() {
             type="text"
             placeholder="Enter palette name"
             className="w-48 border-0 border-b-2 border-black-900 px-3 py-2 text-sm focus:border-b-2 focus:outline-none focus:border-green-500"
+             onChange={(e) => {
+                 updatePalettes((prev) =>
+                  prev.map((p, i) =>
+                    i === paletteIndex
+                      ? { ...p, name: e.target.value }
+                      : p
+                  )
+                );
+              }}
           />
          {palettes.length > 1 && (
             <button
@@ -103,7 +112,7 @@ export default function Colors() {
                             ...p,
                             colors: p.colors.map((c, i) =>
                               i === index
-                                ? { ...c, role: e.target.value }
+                                ? { ...c, hex: e.target.value }
                                 : c
                             ),
                           }
@@ -146,7 +155,7 @@ export default function Colors() {
                             ...p,
                             colors: p.colors.map((c, i) =>
                               i === index
-                                ? { ...c, role: e.target.value }
+                                ? { ...c, hex: e.target.value }
                                 : c
                             ),
                           }
